@@ -1,0 +1,46 @@
+/*/ UNIVERSIDAD DE LAS FUERZAS ARMADAS 
+ NOMBRE: NAOMI OBANDO 
+ NRC: 29925          ASIGNATURA: APLICACION DE TECNOLOGIAS WEB */
+
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background: linear-gradient(135deg, #e8f0ff, #ffffff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .recuadro {
+      background-color: #fff;
+      border: 3px solid #0056b3;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      padding: 40px 60px;
+      max-width: 500px;
+    }
+
+    .recuadro img {
+      width: 500px;
+      margin-bottom: 15px;
+    }
+
+    .titulo {
+      font-size: 36px;
+      color: #003d80;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+      letter-spacing: 2px;
+      margin: 0;
+    }
+
+
+    .linea {
+      width: 80%;
+      height: 4px;
+      background-color: #0056b3;
+      margin: 20px auto;
+      border-radius: 2px;
+    }
+

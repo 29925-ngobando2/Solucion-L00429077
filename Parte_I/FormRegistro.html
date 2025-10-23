@@ -1,0 +1,74 @@
+<!-- UNIVERSIDAD DE LAS FUERZAS ARMADAS 
+ NOMBRE: NAOMI OBANDO 
+ NRC: 29925          ASIGNATURA: APLICACION DE TECNOLOGIAS WEB-->
+<script type="text/javascript">
+  function mov(x){
+    if(x==1){
+      divCDR = document.getElementById('confi');
+      divCDR.style.display = "";
+    }else{
+      divCDR = document.getElementById('confi');
+      divCDR.style.display = "none";
+    }
+  }
+</script>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PARTE I</title>
+  </head>
+  <body>
+    <form>
+       <fieldset>
+         <legend>DIRECCION DE ENVIO</legend>
+         Calle Principal <br>
+         <input type="text" name="txtPrincipal" value="">
+         <br><br>
+         Transversal<br>
+         <input type="text" name="txtTransversal" value="">
+
+		<br><br>
+    <!-- Si el boton esta activado en propietario se activa el boton enviar datos-->
+		    <input type="radio" name="chbEntrega" value="PROPIETARIO" onclick="SubmitDireccion.disabled = !this.checked;mov(0)"> Entrega al propietario.<br>
+       <!-- Si el boton esta activado en tercero se visualiza el formulario de la informacion confidencial --> 
+        <input type="radio" name="chbEntrega" value="TERCERO" onclick="SubmitDireccion.disabled = this.checked; mov(1)"> Entrega a un tercero.
+
+         <br><br>
+         Cantones: <select  name="cmbCantones">
+		      <optgroup label="PICHINCHA">
+					<option value="Quito">Quito</option>
+					<option value="Rumiñahui">Rumiñahui</option>
+					<option value="Mejia">Mejia</option>
+             </optgroup>
+
+			 <optgroup label="GUAYAS">
+					<option value="Guayaquil">Guayaquil</option>
+					<option value="Santa Elena">Santa Elena</option>
+					<option value="Salinas">Salinas</option>
+             </optgroup>
+
+         </select>
+
+         <br><br>
+           <input type="submit" name="SubmitDireccion" value="ENVIAR DATOS">
+       </fieldset>
+
+	      <br>
+        <div id="confi" style="display: none;">
+       <fieldset>
+         <legend>INFORMACIÓN CONFIDENCIAL</legend>
+         Código Postal:
+         <input type="password" name="pswCodigoPostal" value="">
+
+		       <br><br>
+         Referencia de la Dirección:<br>
+         <textarea name="Mensaje" rows="3" cols="30" id="Mensaje"></textarea><br>
+         <br>
+           <input type="submit" name="SubmitConfidencial" value="Guardar">
+       </fieldset>
+      </div>
+      <a href="../index.html">Regresar</a> 
+    </form>
+  </body>
+</html>
